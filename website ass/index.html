@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Upload, preview, and interact with various file types seamlessly." />
+    <title>File Upload and Preview</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>File Upload and Preview</h1>
+
+      <!-- File Drop Area -->
+      <div id="drop-area" class="file-drop-zone" role="button" tabindex="0" aria-label="Drag and drop files or click to select">
+        <p>
+          Drag & Drop your file here or
+          <span id="file-select">choose a file</span>
+        </p>
+        <input
+          type="file"
+          id="file-input"
+          hidden
+          accept=".pdf,.doc,.docx,.xls,.xlsx,.txt,.pptx,.ppt"
+        />
+      </div>
+
+      <div id="notification" class="notification hidden"></div>
+
+
+      <div id="zoom-controls" class="zoom-controls">
+        <button id="zoom-in">Zoom In</button>
+        <button id="zoom-out">Zoom Out</button>
+      </div>
+
+      <!-- Download Button -->
+      <button id="download-button" aria-label="Download the uploaded file">Download</button>
+
+      <!-- Metadata Section -->
+      <div id="file-metadata" class="metadata-container">
+        <h4>File Metadata</h4>
+        <p id="file-name"><strong>Name:</strong> <span>Not available</span></p>
+        <p id="file-size"><strong>Size:</strong> <span>Not available</span></p>
+        <p id="file-type"><strong>Type:</strong> <span>Not available</span></p>
+      </div>
+
+      <!-- Error Notification -->
+      <p id="error-message" class="error-message" role="alert" aria-live="assertive" style="color: red; text-align: center;"></p>
+
+      <!-- Search Section -->
+      <div class="search-container">
+        <label for="search-input">Search:</label>
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Enter word or sentence"
+        />
+        <button id="submit-button">Submit</button>
+        <button id="clear-button">Clear</button>
+      </div>
+
+      <!-- Preview Section -->
+      <div id="preview-container">
+        <p style="color: gray; font-style: italic;">
+          File content will be displayed here after a successful upload.
+        </p>
+      </div>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PptxGenJS/3.12.0/pptxgen.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.0.2/tesseract.min.js"></script>
+    <script src="scripts/app.js"></script>
+  </body>
+</html>
