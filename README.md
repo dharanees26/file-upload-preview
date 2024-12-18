@@ -37,5 +37,15 @@ This project is a responsive web application that allows users to upload and pre
 *Use the zoom and pan controls to adjust the view for PDFs or PowerPoint slides.
 *Download the uploaded file using the "Download" button.
 
+![image](https://github.com/user-attachments/assets/d0baeae1-47c7-42e3-94f1-8386fb4aef24)
+
+![image](https://github.com/user-attachments/assets/1c689413-114c-4d6d-80d2-7053e65b8710)
+
+![image](https://github.com/user-attachments/assets/e2bf80e3-8a18-4280-bfc2-fe408d02b21e)
+
+
+
+
+
 
 
